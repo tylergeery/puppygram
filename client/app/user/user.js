@@ -3,9 +3,9 @@
 angular.module('puppyGramApp')
   .config(function ($stateProvider) {
     $stateProvider
-      .state('admin', {
-        url: '/admin',
-        templateUrl: 'app/admin/admin.html',
+      .state('user', {
+        url: '/user',
+        templateUrl: 'app/user/user.html',
         controller: 'AdminCtrl'
       });
   });

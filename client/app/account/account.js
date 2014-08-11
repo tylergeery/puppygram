@@ -3,6 +3,11 @@
 angular.module('puppyGramApp')
   .config(function ($stateProvider) {
     $stateProvider
+      .state('home', {
+        url: '/',
+        templateUrl: 'app/account/login/login.html',
+        controller: 'LoginCtrl'
+      })
       .state('login', {
         url: '/login',
         templateUrl: 'app/account/login/login.html',

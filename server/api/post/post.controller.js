@@ -1,7 +1,7 @@
 'use strict';
 
 var _ = require('lodash');
-var Posts = require('./posts.model');
+var Posts = require('./post.model');
 
 // Get list of postss
 exports.index = function(req, res) {

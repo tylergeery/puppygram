@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('puppyGramApp')
-  .controller('AdminCtrl', function ($scope, $http, Auth, User) {
+  .controller('UserCtrl', function ($scope, $http, Auth, User) {
 
     $http.get('/api/users').success(function(users) {
       $scope.users = users;

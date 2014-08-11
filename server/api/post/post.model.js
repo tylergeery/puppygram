@@ -16,4 +16,4 @@ var PostSchema = new Schema({
   comments: [CommentSchema]
 });
 
-module.exports = mongoose.model('Posts', PostsSchema);
+module.exports = mongoose.model('Posts', PostSchema);

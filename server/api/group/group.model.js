@@ -6,7 +6,8 @@ var mongoose = require('mongoose'),
 var GroupSchema = new Schema({
   name: String,
   info: String,
-  active: Boolean
+  active: Boolean,
+  members: [String],
 });
 
 module.exports = mongoose.model('Group', GroupSchema);

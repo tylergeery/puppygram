@@ -5,6 +5,10 @@ angular.module('puppyGramApp')
     $scope.user = {};
     $scope.errors = {};
 
+    if(Auth.isLoggedIn()) {
+      $location.path('/user');
+    }
+
     $scope.register = function(form) {
       $scope.submitted = true;
 

@@ -8,10 +8,6 @@ angular.module('puppyGramApp')
         templateUrl: 'app/account/login/login.html',
         controller: 'LoginCtrl'
       })
-      .state('home', {
-        url: '/home',
-        templateUrl: 'app/user/user.html'
-      })
       .state('login', {
         url: '/login',
         templateUrl: 'app/account/login/login.html',

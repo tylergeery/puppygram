@@ -5,6 +5,10 @@ angular.module('puppyGramApp')
     $scope.user = {};
     $scope.errors = {};
 
+    if(Auth.isLoggedIn()) {
+      $location.path('/user');
+    }
+
     $scope.login = function(form) {
       $scope.submitted = true;
 
@@ -15,7 +19,7 @@ angular.module('puppyGramApp')
         })
         .then( function() {
           // Logged in, redirect to home
-          $location.path('/home');
+          $location.path('/user');
         })
         .catch( function(err) {
           $scope.errors.other = err.message;

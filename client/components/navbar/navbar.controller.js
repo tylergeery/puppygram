@@ -4,7 +4,7 @@ angular.module('puppyGramApp')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
     $scope.menu = [{
       'title': 'Home',
-      'link': '/home'
+      'link': '/user'
     },
     {
       'title': 'Pets',

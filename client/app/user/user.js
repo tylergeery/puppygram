@@ -6,6 +6,6 @@ angular.module('puppyGramApp')
       .state('user', {
         url: '/user',
         templateUrl: 'app/user/user.html',
-        controller: 'AdminCtrl'
+        controller: 'UserCtrl'
       });
   });

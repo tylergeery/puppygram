@@ -1,7 +1,7 @@
 'use strict';
 
 var mongoose = require('mongoose'),
-	CommentSchema = require('../comment/comment.model.js'),
+    CommentSchema = require('../comment/comment.model.js'),
     Schema = mongoose.Schema;
 
 
@@ -11,8 +11,8 @@ var PostSchema = new Schema({
   video: String,
   username: String,
   rank: Number,
-  created: Date,
-  edited: Date,
+  created: {type: Date, default: Date.now},
+  edited: {type: Date, default: Date.now},
   comments: [CommentSchema]
 });
 

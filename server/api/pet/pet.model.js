@@ -5,8 +5,14 @@ var mongoose = require('mongoose'),
 
 var PetSchema = new Schema({
   name: String,
-  info: String,
-  active: Boolean
+  bio: String,
+  type: String,
+  age: Number,
+  breed: String,
+  nicknames: [Array],
+  images: [Array],
+  videos: [Array],
+  created: {type:Date, default: Date.now}
 });
 
 module.exports = mongoose.model('Pet', PetSchema);

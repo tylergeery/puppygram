@@ -1,16 +1,11 @@
 'use strict';
 
 angular.module('puppyGramApp')
-  .factory('group', function () {
-    // Service logic
-    // ...
-
-    var meaningOfLife = 42;
-
-    // Public API here
-    return {
-      someMethod: function () {
-        return meaningOfLife;
-      }
-    };
+  .factory('Group', function ($resource) {
+    return $resource('/api/groups/:id', {
+      id: '@_id'
+    },
+    {
+      
+    });
   });

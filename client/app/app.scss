@@ -8,38 +8,29 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
  * App-wide Styles
  */
 a {color:inherit;}
-a:hover {}
+
+/* General Styles for navbar.html */
 .doggy-navbar a:hover {color:#A59F6F; text-decoration:none;} 
 .doggy-navbar .navbar-right:last-child {margin:0;}
-
-/* General Styles for both signup & login pages */
-.navbar-default {background:#3F3111;}
-.puppy-absolute-background {background:url('../../assets/images/background-wood.jpg'); background-size:100% 200px; background-repeat: repeat; width:100%; height:100%; position:fixed; top:0; left:0; z-index:-1;}
-.doghouse { border-radius: 50% 50% 0 0 / 150px 150px 0 0; background:white; background-attachment:fixed; height:100%; border:5px solid rgb(50,50,50);}
-.doghouse {color:#3F3111;}
-.doghouse-navbar a, .doghouse-navbar a:visited {color:#3F3111;}
-.doghouse a:hover {background:#3F3111;}
-.dog-login-image {display: block;
-    padding: 15px;
-    width: 60%;
-    margin: auto;
-}
-/* General Styles for both signup & login pages */
 .doggy-navbar {position: relative; min-height: 50px; margin-bottom: 20px; border: 1px solid transparent;}
 .doggy-navbar-default {background:#3F3111; color:white;}
+.doggy-nav {list-style-type:none; padding-left:0}
+.doggy-nav-hover{ background:transparent; padding:15px; line-height:20px; display:block; text-decoration:none}
+
+/* General Styles for both signup & login pages */
 .puppy-absolute-background {background:url('../../assets/images/background-wood.jpg'); background-size:100% 200px; background-repeat: repeat; width:100%; height:100%; position:fixed; top:0; left:0; z-index:-1;}
 .doghouse { border-radius: 50% 50% 0 0 / 150px 150px 0 0; background:white; background-attachment:fixed; height:100%; border:5px solid rgb(50,50,50); border-bottom:none;}
 .doghouse {color:#3F3111;}
-.doghouse-navbar a, .doghouse-navbar a:visited {color:#3F3111;}
 .doghouse a:hover {background:#A59F6F;}
 .dog-login-image {display: block;
     padding: 15px;
     width: 60%;
     margin: auto;
 }
-.doggy-nav {list-style-type:none; padding-left:0}
-.doggy-nav-hover{ background:transparent; padding:15px 15px 15px 15px; line-height:20px; display:block; text-decoration:none}
 .doggy-login-footer { background:#3F3111; color:white; font-style:italic; font-weight:100; font-size:3em; text-align:center; padding:15px;}
+
+/* General styles for sidebar.html */
+
 
 
 .browsehappy {
@@ -50,10 +41,11 @@ a:hover {}
 }
 
 /* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
     .container {
         max-width: 730px;
     }
+    .doggy-sidebar {background:#D8CFBC; position:absolute; top:0; left:0; overflow-y:scroll; height:100%;}
 }
 
 // Component styles are injected through grunt

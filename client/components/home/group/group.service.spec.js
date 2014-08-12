@@ -1,18 +1,18 @@
 'use strict';
 
-describe('Service: Group', function () {
+describe('Service: group', function () {
 
   // load the service's module
   beforeEach(module('puppyGramApp'));
 
   // instantiate service
-  var Group;
-  beforeEach(inject(function (_Group_) {
-    Group = _Group_;
+  var group;
+  beforeEach(inject(function (_group_) {
+    group = _group_;
   }));
 
   it('should do something', function () {
-    expect(!!Group).toBe(true);
+    expect(!!group).toBe(true);
   });
 
 });

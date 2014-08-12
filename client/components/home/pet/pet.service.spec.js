@@ -1,18 +1,18 @@
 'use strict';
 
-describe('Service: Pet', function () {
+describe('Service: pet', function () {
 
   // load the service's module
   beforeEach(module('puppyGramApp'));
 
   // instantiate service
-  var Pet;
-  beforeEach(inject(function (_Pet_) {
-    Pet = _Pet_;
+  var pet;
+  beforeEach(inject(function (_pet_) {
+    pet = _pet_;
   }));
 
   it('should do something', function () {
-    expect(!!Pet).toBe(true);
+    expect(!!pet).toBe(true);
   });
 
 });

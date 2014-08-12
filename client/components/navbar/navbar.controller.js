@@ -20,4 +20,8 @@ angular.module('puppyGramApp')
     $scope.isActive = function(route) {
       return route === $location.path();
     };
+
+    $scope.isLoginRoute = function() {
+      return ($location.path() === '/login' || $location.path() === '/signup' || $location.path() === '/') ? true : false;
+    }
   });

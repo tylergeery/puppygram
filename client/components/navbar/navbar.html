@@ -1,4 +1,4 @@
-<div class="navbar navbar-default navbar-static-top" ng-controller="NavbarCtrl">
+<div class="navbar navbar-static-top" ng-controller="NavbarCtrl" ng-class="{'navbar-default': !isLoginRoute(),  'doghouse-navbar': isLoginRoute()}">
   <div class="container">
     <div class="navbar-header">
 
@@ -12,19 +12,19 @@
       <a href="/" class="navbar-brand"><i class="fa fa-paw" style="padding-right:5px;"></i>puppy-gram</a>
     </div>
     <div collapse="isCollapsed" class="navbar-collapse collapse" id="navbar-main">
-      <ul class="nav navbar-nav">
+      <ul class="doggy-nav navbar-nav">
         <li ng-repeat="item in menu" ng-class="{active: isActive(item.link)}">
-            <a ng-href="{{item.link}}">{{item.title}}</a>
+            <a class="doggy-nav-hover" ng-href="{{item.link}}">{{item.title}}</a>
         </li>
-        <li ng-show="isAdmin()" ng-class="{active: isActive('/user')}"><a href="/user">Profile</a></li>
+        <li ng-show="isAdmin()" ng-class="{active: isActive('/user')}"><a class="doggy-nav-hover" href="/user">Profile</a></li>
       </ul>
 
-      <ul class="nav navbar-nav navbar-right">
-        <li ng-hide="isLoggedIn()" ng-class="{active: isActive('/signup')}"><a href="/signup">Sign up</a></li>
-        <li ng-hide="isLoggedIn()" ng-class="{active: isActive('/login')}"><a href="/login">Login</a></li>
+      <ul class="doggy-nav navbar-nav navbar-right">
+        <li ng-hide="isLoggedIn()" ng-class="{active: isActive('/signup')}"><a class="doggy-nav-hover" href="/signup">Sign up</a></li>
+        <li ng-hide="isLoggedIn()" ng-class="{active: isActive('/login')}"><a class="doggy-nav-hover" href="/login">Login</a></li>
         <li ng-show="isLoggedIn()"><p class="navbar-text">Hello {{ getCurrentUser().name }}</p> </li>
-        <li ng-show="isLoggedIn()" ng-class="{active: isActive('/settings')}"><a href="/settings"><span class="glyphicon glyphicon-cog"></span></a></li>
-        <li ng-show="isLoggedIn()" ng-class="{active: isActive('/logout')}"><a href="" ng-click="logout()">Logout</a></li>
+        <li ng-show="isLoggedIn()" ng-class="{active: isActive('/settings')}"><a class="doggy-nav-hover" href="/settings"><span class="glyphicon glyphicon-cog"></span></a></li>
+        <li ng-show="isLoggedIn()" ng-class="{active: isActive('/logout')}"><a class="doggy-nav-hover" href="" ng-click="logout()">Logout</a></li>
       </ul>
     </div>
   </div>

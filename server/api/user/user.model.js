@@ -2,7 +2,7 @@
 
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-var PetSchema = require('../pet/pet.model.js'),
+var PetSchema = require('../pet/pet.model.js');
 var crypto = require('crypto');
 
 var authTypes = ['github', 'twitter', 'facebook', 'google'];

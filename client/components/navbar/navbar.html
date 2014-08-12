@@ -1,5 +1,5 @@
-<div class="navbar navbar-static-top" ng-controller="NavbarCtrl" ng-class="{'navbar-default': !isLoginRoute(),  'doghouse-navbar': isLoginRoute()}">
-  <div class="container">
+<div class="doggy-navbar navbar-static-top" ng-controller="NavbarCtrl" ng-class="{'doggy-navbar-default': !isLoginRoute(),  'doghouse-navbar': isLoginRoute()}">
+  <div>
     <div class="navbar-header">
 
       <button class="navbar-toggle" type="button" ng-click="isCollapsed = !isCollapsed">
@@ -9,11 +9,11 @@
         <span class="icon-bar"></span>
       </button>
 
-      <a href="/" class="navbar-brand"><i class="fa fa-paw" style="padding-right:5px;"></i>puppy-gram</a>
+      <a href="/" class="navbar-brand"><i class="fa fa-paw" style="padding-right:5px;"></i>Puppygram</a>
     </div>
     <div collapse="isCollapsed" class="navbar-collapse collapse" id="navbar-main">
       <ul class="doggy-nav navbar-nav">
-        <li ng-repeat="item in menu" ng-class="{active: isActive(item.link)}">
+        <li ng-repeat="item in menu" ng-class="{active: isActive(item.link)}" ng-show="isLoggedIn()">
             <a class="doggy-nav-hover" ng-href="{{item.link}}">{{item.title}}</a>
         </li>
         <li ng-show="isAdmin()" ng-class="{active: isActive('/user')}"><a class="doggy-nav-hover" href="/user">Profile</a></li>

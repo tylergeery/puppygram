@@ -4,7 +4,11 @@ angular.module('puppyGramApp')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
     $scope.menu = [{
       'title': 'Home',
-      'link': '/'
+      'link': '/home'
+    },
+    {
+      'title': 'Pets',
+      'link': '/pets'
     }];
 
     $scope.isCollapsed = true;

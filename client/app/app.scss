@@ -8,11 +8,13 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
  * App-wide Styles
  */
 a {color:inherit;}
+.doggy-pr5 {padding-right:5px;}
 
 /* General Styles for navbar.html */
+.doggy-navbar {font-size:1.5em; line-height:50px; vertical-align:middle; margin:0;}
 .doggy-navbar a:hover {color:#A59F6F; text-decoration:none;} 
 .doggy-navbar .navbar-right:last-child {margin:0;}
-.doggy-navbar {position: relative; min-height: 50px; margin-bottom: 20px; border: 1px solid transparent;}
+.doggy-navbar {position: relative; min-height: 50px; border: 1px solid transparent;}
 .doggy-navbar-default {background:#3F3111; color:white;}
 .doggy-nav {list-style-type:none; padding-left:0}
 .doggy-nav-hover{ background:transparent; padding:15px; line-height:20px; display:block; text-decoration:none}
@@ -30,11 +32,11 @@ a {color:inherit;}
 .doggy-login-footer { background:#3F3111; color:white; font-style:italic; font-weight:100; font-size:3em; text-align:center; padding:15px;}
 
 /* General styles for sidebar.html */
-.doggy-sidebar {background:#D8CFBC; color:#3F3111;}
+.doggy-sidebar {background:#F2F0E6; color:#3F3111;}
 .doggy-sidebar a:hover {text-decoration:none; color:#584D32;}
 .doggy-sidebar-group-lead { font-size: 1.2em; font-weight:500;}
 .doggy-sidebar-group-lead i {margin-right:.6em;}
-.doggy-sidebar ul {list-style-type: none; font-weight:300;}
+.doggy-sidebar ul {list-style-type: none; font-weight:300; padding-left:1.5em;}
 
 .browsehappy {
     margin: 0.2em 0;

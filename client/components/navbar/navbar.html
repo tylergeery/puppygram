@@ -9,7 +9,7 @@
         <span class="icon-bar"></span>
       </button>
 
-      <a href="/" class="navbar-brand"><i class="fa fa-paw" style="padding-right:5px;"></i>Puppygram</a>
+      <a href="/" class="navbar-brand">Puppygram</a>
     </div>
     <div collapse="isCollapsed" class="navbar-collapse collapse" id="navbar-main">
       <ul class="doggy-nav navbar-nav">
@@ -25,7 +25,7 @@
         <li ng-show="isLoggedIn()"><a class="doggy-nav-hover" href="#"><i class="fa fa-search"></i></a> </li>
         <li ng-show="isLoggedIn()"><a class="doggy-nav-hover" href="#"><i class="fa fa-globe"></i></a> </li>
         <li ng-show="isLoggedIn()" ng-class="{active: isActive('/settings')}"><a class="doggy-nav-hover" href="/settings"><span class="glyphicon glyphicon-cog"></span></a></li>
-        <li ng-show="isLoggedIn()" ng-class="{active: isActive('/logout')}"><a class="doggy-nav-hover" href="" ng-click="logout()"><i class="fa fa-lock">Logout</i></a></li>
+        <li ng-show="isLoggedIn()" ng-class="{active: isActive('/logout')}"><a class="doggy-nav-hover" href="" ng-click="logout()"><i class="fa fa-lock doggy-pr5"></i>Logout</a></li>
       </ul>
     </div>
   </div>

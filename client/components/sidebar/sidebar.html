@@ -2,16 +2,18 @@
   <p class="doggy-sidebar-group-lead">
   	<a href="/groups"><i class="fa fa-group"></i>Groups</a>
   </p>
-  <ul>
+  <ul class="doggy-sidebar-sublist">
   	<li ng-repeat="group in myGroups">{{group}}</li>
+  	<li>+ Group</li>
   </ul>
 
   <p class="doggy-sidebar-group-lead"> 
-  	<a href="/pets"><i class="fa fa-eye"></i>Pets</a>
+  	<a href="/pets"><i class="fa fa-paw"></i>Pets</a>
   </p>
-  <ul>
+  <ul class="doggy-sidebar-sublist">
   	<li ng-repeat="pet in myPets">
   		<a ng-href="/pets/{{pet._id}}">{{pet.name}}</a>
   	</li>
+  	<li>+ Pet</li>
   </ul>
 </div>

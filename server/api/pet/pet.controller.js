@@ -22,7 +22,7 @@ exports.getMyPets = function(req, res) {
   });
 };
 
-exports.getHerPets = function(req, res) {
+exports.getUserPets = function(req, res) {
   var userId = req.user._id;
   var herId = req.params.id;
   User.findOne({_id: herId, friends: { $elemMatch: [userId]}}, function(err, user) {
@@ -32,7 +32,7 @@ exports.getHerPets = function(req, res) {
         return res.json(200, pets);
       });
     } else {
-      return res.send(401, "This user's pets are private.");
+      return res.json(401, "This user's pets are private.");
     }
   });
 }

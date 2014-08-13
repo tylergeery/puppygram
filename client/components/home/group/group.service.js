@@ -6,6 +6,12 @@ angular.module('puppyGramApp')
       id: '@_id'
     },
     {
-      
+      myGroups: {
+      	method: 'GET',
+      	isArray: true,
+        params: {
+          controller:'mygroups'
+        }
+      }
     });
   });

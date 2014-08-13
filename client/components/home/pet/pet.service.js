@@ -8,6 +8,7 @@ angular.module('puppyGramApp')
     {
       myPets: {
       	method: 'GET',
+      	isArray: true,
         params: {
           controller:'mypets'
         }

@@ -17,6 +17,12 @@ angular.module('puppyGramApp')
         params: {
           id:'me'
         }
+      },
+      getFriends: {
+        method: 'GET',
+        params: {
+          controller: 'friends'
+        }
       }
 	  });
   });

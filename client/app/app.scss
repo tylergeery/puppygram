@@ -30,8 +30,11 @@ a {color:inherit;}
 .doggy-login-footer { background:#3F3111; color:white; font-style:italic; font-weight:100; font-size:3em; text-align:center; padding:15px;}
 
 /* General styles for sidebar.html */
-
-
+.doggy-sidebar {background:#D8CFBC; color:#3F3111;}
+.doggy-sidebar a:hover {text-decoration:none; color:#584D32;}
+.doggy-sidebar-group-lead { font-size: 1.2em; font-weight:500;}
+.doggy-sidebar-group-lead i {margin-right:.6em;}
+.doggy-sidebar ul {list-style-type: none; font-weight:300;}
 
 .browsehappy {
     margin: 0.2em 0;
@@ -45,7 +48,7 @@ a {color:inherit;}
     .container {
         max-width: 730px;
     }
-    .doggy-sidebar {background:#D8CFBC; position:absolute; top:0; left:0; overflow-y:scroll; height:100%;}
+    .doggy-sidebar { position:absolute; top:0; left:0; overflow-y:scroll; height:100%; padding-top:70px;}
 }
 
 // Component styles are injected through grunt

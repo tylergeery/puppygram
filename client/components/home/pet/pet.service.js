@@ -2,10 +2,15 @@
 
 angular.module('puppyGramApp')
   .factory('Pet', function ($resource) {
-    return $resource('/api/pets/:id', {
+    return $resource('/api/pets/:id/:controller', {
       id: '@_id'
     },
     {
-      
+      myPets: {
+      	method: 'GET',
+        params: {
+          controller:'mypets'
+        }
+      }
     });
   });

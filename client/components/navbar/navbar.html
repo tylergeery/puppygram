@@ -23,8 +23,9 @@
         <li ng-hide="isLoggedIn()" ng-class="{active: isActive('/signup')}"><a class="doggy-nav-hover" href="/signup">Sign up</a></li>
         <li ng-hide="isLoggedIn()" ng-class="{active: isActive('/login')}"><a class="doggy-nav-hover" href="/login">Login</a></li>
         <li ng-show="isLoggedIn()"><a class="doggy-nav-hover" href="#"><i class="fa fa-search"></i></a> </li>
+        <li ng-show="isLoggedIn()"><a class="doggy-nav-hover" href="#"><i class="fa fa-globe"></i></a> </li>
         <li ng-show="isLoggedIn()" ng-class="{active: isActive('/settings')}"><a class="doggy-nav-hover" href="/settings"><span class="glyphicon glyphicon-cog"></span></a></li>
-        <li ng-show="isLoggedIn()" ng-class="{active: isActive('/logout')}"><a class="doggy-nav-hover" href="" ng-click="logout()">Logout</a></li>
+        <li ng-show="isLoggedIn()" ng-class="{active: isActive('/logout')}"><a class="doggy-nav-hover" href="" ng-click="logout()"><i class="fa fa-lock">Logout</i></a></li>
       </ul>
     </div>
   </div>

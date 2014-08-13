@@ -2,19 +2,19 @@
 
 angular.module('puppyGramApp')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
-    $scope.menu = [{
+    /*$scope.menu = [{
       'title': 'Home',
       'link': '/user'
     },
     {
       'title': 'Pets',
       'link': '/pets'
-    }];
+    }];*/
 
     $scope.isCollapsed = true;
     $scope.isLoggedIn = Auth.isLoggedIn;
     $scope.isAdmin = Auth.isAdmin;
-    $scope.getCurrentUser = Auth.getCurrentUser;
+    // $scope.getCurrentUser = Auth.getCurrentUser;
 
     $scope.logout = function() {
       Auth.logout();

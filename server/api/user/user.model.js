@@ -15,6 +15,9 @@ var UserSchema = new Schema({
     default: 'user'
   },
   pets: [PetSchema],
+  friends: [String],
+  requested: [String],
+  pending: [String],
   hashedPassword: String,
   provider: String,
   salt: String,

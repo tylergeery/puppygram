@@ -1,3 +1,17 @@
-<div ng-controller="SidebarCtrl">
-  
+<div ng-controller="SidebarCtrl" class="col-sm-2 doggy-sidebar">
+  <p class="doggy-sidebar-group-lead">
+  	<a href="/groups"><i class="fa fa-group"></i>Groups</a>
+  </p>
+  <ul>
+  	<li ng-repeat="group in myGroups">{{group}}</li>
+  </ul>
+
+  <p class="doggy-sidebar-group-lead"> 
+  	<a href="/pets"><i class="fa fa-eye"></i>Pets</a>
+  </p>
+  <ul>
+  	<li ng-repeat="pet in myPets">
+  		<a ng-href="/pets/{{pet._id}}">{{pet.name}}</a>
+  	</li>
+  </ul>
 </div>

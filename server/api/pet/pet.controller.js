@@ -2,21 +2,47 @@
 
 var _ = require('lodash');
 var Pet = require('./pet.model');
+var User = require('../user/user.model');
 
 // Get list of pets
 exports.index = function(req, res) {
-  Pet.find(function (err, pets) {
+  var userId = req.user._id;
+  Pet.find({_id: userId}, function (err, pets) {
     if(err) { return handleError(res, err); }
     return res.json(200, pets);
   });
 };
+
+// Get a list of a user's own pets
+exports.getMyPets = function(req, res) {
+  var userId = req.user._id;
+  Pet.find({_id: userId}, function (err, pets) {
+    if(err) { return handleError(res, err); }
+    return res.json(200, pets);
+  });
+};
+
+exports.getHerPets = function(req, res) {
+  var userId = req.user._id;
+  var herId = req.params.id;
+  User.findOne({_id: herId, friends: { $elemMatch: [userId]}}, function(err, user) {
+    if(user) {
+      Pet.find({_id: herId}, function (err, pets) {
+        if(err) { return handleError(res, err); }
+        return res.json(200, pets);
+      });
+    } else {
+      return res.send(401, "This user's pets are private.");
+    }
+  });
+}
 
 // Get a single pet
 exports.show = function(req, res) {
   Pet.findById(req.params.id, function (err, pet) {
     if(err) { return handleError(res, err); }
     if(!pet) { return res.send(404); }
-    return res.json(pet);
+    return res.json(200, pet);
   });
 };
 

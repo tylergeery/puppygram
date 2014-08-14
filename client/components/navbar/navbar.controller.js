@@ -26,6 +26,10 @@ angular.module('puppyGramApp')
     };
 
     $scope.isLoginRoute = function() {
-      return ($location.path() === '/login' || $location.path() === '/signup' || $location.path() === '/') ? true : false;
+      return ($location.path() === '/login' || $location.path() === '/signup') ? true : false;
+    }
+
+    if($scope.isLoginRoute() && $scope.isLoggedIn()) {
+      $location.path('/user');
     }
   });

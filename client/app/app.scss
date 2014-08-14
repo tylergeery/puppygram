@@ -12,7 +12,8 @@ a {color:inherit;}
 
 /* General Styles for navbar.html */
 .doggy-navbar {font-size:1.5em; line-height:50px; vertical-align:middle; margin:0;}
-.doggy-navbar a:hover {color:#A59F6F; text-decoration:none;} 
+.doggy-navbar a:hover {text-decoration:none; color:white;}
+.doggy-navbar-default a:hover {color:#A59F6F; text-decoration:none;} 
 .doggy-navbar .navbar-right:last-child {margin:0;}
 .doggy-navbar {position: relative; min-height: 50px; border: 1px solid transparent;}
 .doggy-navbar-default {background:#3F3111; color:white;}
@@ -37,6 +38,15 @@ a {color:inherit;}
 .doggy-sidebar-group-lead { font-size: 1.2em; font-weight:500;}
 .doggy-sidebar-group-lead i {margin-right:.6em;}
 .doggy-sidebar ul {list-style-type: none; font-weight:300; padding-left:1.5em;}
+.doggy-sidebar-add {border:none; border-radius:1px; padding:2px; background:none; cursor:pointer;}
+.doggy-sidebar input:focus {
+    border-color: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    outline: 0;
+    background:rgb(255,255,255);
+}
+
 
 .browsehappy {
     margin: 0.2em 0;

@@ -4,7 +4,9 @@
   </p>
   <ul class="doggy-sidebar-sublist">
   	<li ng-repeat="group in myGroups">{{group}}</li>
-  	<li>+ Group</li>
+  	<li>
+  		<input class="doggy-sidebar-add" ng-model="newGroup" placeholder=" + Group"/>
+  	</li>
   </ul>
 
   <p class="doggy-sidebar-group-lead"> 
@@ -14,6 +16,8 @@
   	<li ng-repeat="pet in myPets">
   		<a ng-href="/pets/{{pet._id}}">{{pet.name}}</a>
   	</li>
-  	<li>+ Pet</li>
+  	<li>
+  		<input class="doggy-sidebar-add" ng-model="newPet" placeholder=" + Pet"/>
+  	</li>
   </ul>
 </div>

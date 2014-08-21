@@ -21,12 +21,12 @@ exports.show = function(req, res) {
 };
 
 
-// Get a list of a user's own pets
+// Get a list of a user's own groups
 exports.getMyGroups = function(req, res) {
   var userId = req.user._id;
-  Pet.find({_id: userId}, function (err, pets) {
+  Group.find({_id: userId}, function (err, groups) {
     if(err) { return handleError(res, err); }
-    return res.json(200, pets);
+    return res.json(200, groups);
   });
 };
 
@@ -35,12 +35,12 @@ exports.getUserGroups = function(req, res) {
   var herId = req.params.id;
   User.findOne({_id: herId, friends: { $elemMatch: [userId]}}, function(err, user) {
     if(user) {
-      Pet.find({_id: herId}, function (err, pets) {
+      Group.find({_id: herId}, function (err, groups) {
         if(err) { return handleError(res, err); }
-        return res.json(200, pets);
+        return res.json(200, groups);
       });
     } else {
-      return res.json(401, "This user's pets are private.");
+      return res.json(401, {msg:"This user's groups are private."});
     }
   });
 }

@@ -1,4 +1,4 @@
-kj<div class="doggy-navbar navbar-static-top" ng-controller="NavbarCtrl" ng-class="{'doggy-navbar-default': !isLoginRoute(),  'doghouse-navbar': isLoginRoute()}">
+<div class="doggy-navbar navbar-static-top" ng-controller="NavbarCtrl" ng-class="{'doggy-navbar-default': !isLoginRoute(),  'doghouse-navbar': isLoginRoute()}">
   <div>
     <div class="navbar-header">
 
@@ -22,9 +22,9 @@ kj<div class="doggy-navbar navbar-static-top" ng-controller="NavbarCtrl" ng-clas
       <ul class="doggy-nav navbar-nav navbar-right">
         <li ng-hide="isLoggedIn()" ng-class="{active: isActive('/signup')}"><a class="doggy-nav-hover" href="/signup">Sign up</a></li>
         <li ng-hide="isLoggedIn()" ng-class="{active: isActive('/login')}"><a class="doggy-nav-hover" href="/login">Login</a></li>
-        <li ng-show="isLoggedIn()" class="search-relative">
-          <a class="doggy-nav-hover" href="#"><i class="fa fa-search"></i></a>
-          <input ng-model="search-term" type="text" />
+        <li ng-show="isLoggedIn()" class="doggy-search-relative" ng-init="search=false">
+          <a class="doggy-nav-hover" ng-click="search=!search" ng-class="{'doggy-search-active': search}"><i class="fa fa-search"></i></a>
+          <input class="doggy-search" ng-model="searchTerm" ng-show="search" type="text" />
         </li>
         <li ng-show="isLoggedIn()"><a class="doggy-nav-hover" href="#"><i class="fa fa-globe"></i></a> </li>
         <li ng-show="isLoggedIn()" ng-class="{active: isActive('/settings')}"><a class="doggy-nav-hover" href="/settings"><span class="glyphicon glyphicon-cog"></span></a></li>

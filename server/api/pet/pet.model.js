@@ -16,7 +16,8 @@ var PetSchema = new Schema({
   // Also need to work out how they will be tagged in regular posts
   images: [Array],
   videos: [Array],
-  created: {type:Date, default: Date.now}
+  created: {type:Date, default: Date.now},
+  keywords: [String]
 });
 
 module.exports = mongoose.model('Pet', PetSchema);

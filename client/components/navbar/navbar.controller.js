@@ -32,4 +32,6 @@ angular.module('puppyGramApp')
     if($scope.isLoginRoute() && $scope.isLoggedIn()) {
       $location.path('/user');
     }
+
+    $scope.search_term = '';
   });

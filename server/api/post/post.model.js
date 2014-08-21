@@ -16,6 +16,7 @@ var PostSchema = new Schema({
   rank: Number,
   created: {type: Date, default: Date.now},
   edited: {type: Date, default: Date.now},
+  keywords: [String],
   comments: [CommentSchema]
 });
 

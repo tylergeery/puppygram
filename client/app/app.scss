@@ -4,48 +4,69 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
 @import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
 @import 'font-awesome/scss/font-awesome';
 
+$black: rgb(0,0,0);
+$off-black: rgb(50,50,50);
+$white: rgb(255,255,255);
+$dog-tan: #F2F0E6;
+$doggy-dark-tan: #A59F6F;
+$dog-brown: #3F3111;
+$gray: rgb(128,128,128);
+
 /**
  * App-wide Styles
  */
-a {color:inherit;}
+a {color:inherit; cursor:pointer;}
 .doggy-pr5 {padding-right:5px;}
+.display-none {display:none;}
+
+/* Removing Chrome Styles */
+textarea:focus, input:focus{
+    outline: 0;
+}
 
 /* General Styles for navbar.html */
 .doggy-navbar {font-size:1.5em; line-height:50px; vertical-align:middle; margin:0;}
 .doggy-navbar a:hover {text-decoration:none; color:white;}
-.doggy-navbar-default a:hover {color:#A59F6F; text-decoration:none;} 
+.doggy-navbar-default a:hover {color:$doggy-dark-tan; text-decoration:none;} 
 .doggy-navbar .navbar-right:last-child {margin:0;}
 .doggy-navbar {position: relative; min-height: 50px; border: 1px solid transparent;}
-.doggy-navbar-default {background:#3F3111; color:white;}
+.doggy-navbar-default {background:$dog-brown; color:white;}
 .doggy-nav {list-style-type:none; padding-left:0}
 .doggy-nav-hover{ background:transparent; padding:15px; line-height:20px; display:block; text-decoration:none}
+.doggy-search-relative { position:relative;}
+a.doggy-search-active {color:$doggy-dark-tan; position:relative; z-index:500000;}
+.doggy-search { background:$dog-tan; border-radius: 10px; font-size: 1em; height: 2em; line-height:100%; vertical-align:middle; margin-top:5px; border: none; width: 420px; position: absolute; top: 0; right: 0; padding: 5px 50px 5px 5px; color:$off-black; }
 
 /* General Styles for both signup & login pages */
 .puppy-absolute-background {background:url('../../assets/images/background-wood.jpg'); background-size:100% 200px; background-repeat: repeat; width:100%; height:100%; position:fixed; top:0; left:0; z-index:-1;}
-.doghouse { border-radius: 50% 50% 0 0 / 150px 150px 0 0; background:white; background-attachment:fixed; height:100%; border:5px solid rgb(50,50,50); border-bottom:none;}
-.doghouse {color:#3F3111;}
-.doghouse a:hover {background:#A59F6F;}
+.doghouse { border-radius: 50% 50% 0 0 / 150px 150px 0 0; background:white; background-attachment:fixed; height:100%; border:5px solid $off-black; border-bottom:none;}
+.doghouse {color:$dog-brown;}
+.doghouse a:hover {background:$doggy-dark-tan;}
 .dog-login-image {display: block;
     padding: 15px;
     width: 60%;
     margin: auto;
 }
-.doggy-login-footer { background:#3F3111; color:white; font-style:italic; font-weight:100; font-size:3em; text-align:center; padding:15px;}
+.doggy-login-footer { background:$dog-brown; color:white; font-style:italic; font-weight:100; font-size:3em; text-align:center; padding:15px;}
 
 /* General styles for sidebar.html */
-.doggy-sidebar {background:#F2F0E6; color:#3F3111;}
+.doggy-sidebar {background:$dog-tan; color:$dog-brown;}
 .doggy-sidebar a:hover {text-decoration:none; color:#584D32;}
 .doggy-sidebar-group-lead { font-size: 1.2em; font-weight:500;}
 .doggy-sidebar-group-lead i {margin-right:.6em;}
-.doggy-sidebar ul {list-style-type: none; font-weight:300; padding-left:1.5em;}
+.doggy-sidebar ul {list-style-type: none; font-weight:300; padding-left:2em;}
 .doggy-sidebar-add {border:none; border-radius:1px; padding:2px; background:none; cursor:pointer;}
+.doggy-sidebar input { color:$gray; border:none; }
 .doggy-sidebar input:focus {
     border-color: none;
     box-shadow: none;
     -webkit-box-shadow: none;
     outline: 0;
-    background:rgb(255,255,255);
+    background:$white;
 }
+.doggy-sidebar-group-item {padding-bottom:5px;}
+.doggy-sidebar-group-item .doggy-group-edit {padding-left:5px; display:none;}
+.doggy-sidebar-group-item:hover .doggy-group-edit {display:inline;}
 
 
 .browsehappy {

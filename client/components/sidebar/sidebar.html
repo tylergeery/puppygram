@@ -3,9 +3,15 @@
   	<a href="/groups"><i class="fa fa-group"></i>Groups</a>
   </p>
   <ul class="doggy-sidebar-sublist">
-  	<li ng-repeat="group in myGroups">{{group}}</li>
+  	<li ng-repeat="group in myGroups" class="doggy-sidebar-group-item">
+      <a ng-href="/groups/{{group._id}}">{{group.name}}</a>
+      <a ng-href="/groups/edit/{{group._id}}" class="glyphicon glyphicon-cog doggy-group-edit"></a>
+    </li>
   	<li>
-  		<input class="doggy-sidebar-add" ng-model="newGroup" placeholder=" + Group"/>
+      <form ng-submit="addGroup()">
+  		  <input class="doggy-sidebar-add" ng-model="newGroup" placeholder="+ Group"/>
+        <input class="display-none" type="submit" id="submit" value="Submit" />
+      </form>
   	</li>
   </ul>
 
@@ -13,11 +19,19 @@
   	<a href="/pets"><i class="fa fa-paw"></i>Pets</a>
   </p>
   <ul class="doggy-sidebar-sublist">
-  	<li ng-repeat="pet in myPets">
-  		<a ng-href="/pets/{{pet._id}}">{{pet.name}}</a>
-  	</li>
-  	<li>
-  		<input class="doggy-sidebar-add" ng-model="newPet" placeholder=" + Pet"/>
-  	</li>
+    <li ng-repeat="pet in myPets" class="doggy-sidebar-group-item">
+      <a ng-href="/pets/{{pet._id}}">{{pet.name}}</a>
+      <a ng-href="/pets/edit/{{pet._id}}" class="glyphicon glyphicon-cog doggy-group-edit"></a>
+    </li>
+    <li>
+      <form ng-submit="addPet()">
+        <input class="doggy-sidebar-add" ng-model="newPet" placeholder="+ Pet"/>
+        <input class="display-none" type="submit" id="submit" value="Submit" />
+      </form>
+    </li>
   </ul>
+
+  <p class="doggy-sidebar-group-lead"> 
+    <a href="/adopt"><i class="fa fa-home"></i>Adopt</a>
+  </p>
 </div>
